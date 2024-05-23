@@ -1,0 +1,94 @@
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+   animation: blinker 5.5s linear infinite;
+}
+.solve {
+    color: white;
+    position: absolute;
+    right: 12%;
+    top: 18%;
+    font-size: 25px;
+}
+
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+.display {
+    width: 91%;
+    height: 100px;
+    /* padding-bottom: 30px; */
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    margin-left: 10px;
+    margin-block: 15px;
+    font-size: 45px;
+    text-align: right;
+    border: 0;
+    outline: 0;
+    box-shadow:  -5px -5px 10px rgba(255, 255, 255, 0.151), 5px 5px 10px rgba(0, 0, 0, 0.24);
+}
+
+.calculator {
+    width: 300px;
+    background-color: rgb(53, 52, 52);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    margin: 6px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 20px;
+}
+
+.zero {
+    width: 133px;
+    border-radius: 40px;
+}
+
+.action {
+    background-color: rgb(194, 193, 193);
+}
+.action:hover {
+    background-color: rgb(235, 232, 232);
+}
+
+.operator {
+    background-color: orange;
+    color: #fff;
+}
+
+.number {
+    background-color: rgba(134, 134, 134, 0.541);
+    color: #fff;
+}
+
+.number:hover {
+    background-color: rgba(173, 170, 170, 0.541);
+}
+
+.operator:hover{
+    background-color: rgb(255, 193, 77);
+}
+.operator:active{
+    background-color: white;
+    color: orange;
+}
