@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Jayculator</title>
+        <link rel="stylesheet" href="jay.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <a class="alink" href="poll.html">Another</a>
+                <p class="solve"></p>
+                <form>
+                    <input type="text" class="display" name="display" readonly>
+                </form>
+                <button class="action" onclick="clearDisplay()">AC</button>
+                <button class="action" onclick="delDisplay() ; check()">DEL</button>
+                <button class="action" onclick="append('00') ; check()" >00</button>
+                <button class="operator " onclick="append('/') ; check()" >/</button>
+                <button class="number" onclick="append('7') ; check()">7</button>
+                <button class="number" onclick="append('8') ; check()">8</button>
+                <button class="number" onclick="append('9') ; check()">9</button>
+                <button class="operator" onclick="append('*') ; check()" >*</button>
+                <button class="number" onclick="append('4') ; check()">4</button>
+                <button class="number" onclick="append('5') ; check()"> 5</button>
+                <button class="number" onclick="append('6') ; check()">6</button>
+                <button class="operator" onclick="append('-') ; check()"  >-</button>
+                <button class="number" onclick="append('1') ; check()">1</button>
+                <button class="number" onclick="append('2' ); check()">2</button>
+                <button class="number" onclick="append('3') ; check()">3</button>
+                <button class="operator"  onclick="append('+') ; check()">+</button>
+                <button class="zero number" onclick="append('0') ; check()">0</button>
+                <button class="number" onclick="append('.') ; check()">.</button>
+                <button class="operator" onclick="calcDisplay() ; check()" >=</button>
+            </div>
+        </div>
+        <aside>
+            <details>
+            <summary>This is a new element that I didn't know of</summary>
+            <h4>This a paragraph in a summary element </h4>
+        </details>
+        <marquee direction="up" scrollamount="5">
+           <h2>This is a H2 marquee statement</h2>
+            Hello this is a marquee element
+        </marquee>
+        
+        </aside>
+        
+        <script>
+           var display = document.querySelector(".display")
+            function append(input) {
+                display.value += input
+                document.querySelector(".solve").textContent = eval(display.value) 
+            }
+
+            function clearDisplay() {
+                display.value = ""
+                document.querySelector(".solve").textContent = eval(display.value) 
+            }
+
+            function delDisplay() {
+                 display.value= display.value.toString().slice(0, -1)
+                 document.querySelector(".solve").textContent = eval(display.value) 
+            }
+
+            var check = () => {
+                    if (display.value.length > 9) {
+                        display.style.fontSize = "20px"
+                    }
+                    else {
+                       display.style.fontSize = "45px"
+                    }
+
+            }
+            function calcDisplay() {
+                try {
+                    display.value = eval(display.value)
+                    document.querySelector(".solve").textContent = "" 
+                }
+                catch(err) {
+                    display.value = "Syntax Error"
+                }
+            }
+            document.querySelector(".alink").setAttribute("href", document.referrer)
+            p = document.createElement("p")
+            p.innerHTML = "This is a paragraph made with Javascript only"
+            document.body.appendChild(p)
+ 
+            // var solve = eval(display.value)
+            console.log(display.value)
+
+            
+        </script>
+    </body>
+</html>
