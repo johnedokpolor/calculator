@@ -8,14 +8,12 @@ body {
     align-items: center;
 }
 
-h2 {
-   animation: blinker 5.5s linear infinite;
-}
+
 .solve {
     color: white;
     position: absolute;
     right: 12%;
-    top: 12%;
+    top: 13%;
     font-size: 25px;
 }
 
