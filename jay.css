@@ -29,7 +29,6 @@ h2 {
 .display {
     width: 91%;
     height: 100px;
-    /* padding-bottom: 30px; */
     background-color: transparent;
     border: 0;
     color: #fff;
@@ -43,7 +42,7 @@ h2 {
 }
 
 .calculator {
-    width: 300px;
+    width: 330px;
     background-color: rgb(53, 52, 52);
     padding: 20px;
     border-radius: 20px;
