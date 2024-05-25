@@ -15,7 +15,7 @@ h2 {
     color: white;
     position: absolute;
     right: 12%;
-    top: 13%;
+    top: 12%;
     font-size: 25px;
 }
 
@@ -27,7 +27,7 @@ h2 {
     }
 }
 .display {
-    width: 95%;
+    width: 91%;
     height: 100px;
     background-color: transparent;
     border: 0;
